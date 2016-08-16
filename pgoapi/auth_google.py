@@ -47,7 +47,7 @@ class AuthGoogle(Auth):
         self._refresh_token = None
 
     def set_proxy(self, proxy_config):
-        self._session.proxies = proxy_config
+        self.proxies = proxy_config
 
     def user_login(self, username, password):
         self.log.info('Google User Login for: {}'.format(username))
